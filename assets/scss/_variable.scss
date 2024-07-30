@@ -1,0 +1,68 @@
+:root {
+    --default-font: "Manrope",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Manrope",  sans-serif;
+    --nav-font: "Manrope",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #091020; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #1f2c4a; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #6e90f6; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #FFC339;  /* The default color of the main navmenu links */
+    --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #0d42ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  
+  /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+  
+
+ 
+  
+  /* Smooth scroll */
+  :root {
+    scroll-behavior: smooth;
+  }
+
+
+    $color_1: var(--default-color);
+    $color_2: var(--accent-color);
+    $color_3: color-mix(in srgb, var(--accent-color), transparent 25%);
+    $color_4: var(--heading-color);
+    $color_5: var(--contrast-color);
+    $color_6: var(--nav-color);
+    $color_7: var(--nav-hover-color);
+    $color_8: var(--nav-dropdown-color);
+    $color_9: var(--nav-dropdown-hover-color);
+    $color_10: #fff;
+    $color_11: color-mix(in srgb, var(--default-color), transparent 50%);
+    $color_12: color-mix(in srgb, var(--default-color), transparent 40%);
+    $color_13: color-mix(in srgb, var(--heading-color), transparent 95%);
+    $font-family_1: var(--default-font);
+    $font-family_2: var(--heading-font);
+    $font-family_3: var(--nav-font);
+    $background-color_1: var(--background-color);
+    $background-color_2: var(--nav-mobile-background-color);
+    $background-color_3: color-mix(in srgb, var(--accent-color), transparent 90%);
+    $background-color_4: var(--accent-color);
+    $background-color_5: var(--nav-dropdown-background-color);
+    $background-color_6: #FFC339;
+    $background-color_7: rgba(33, 37, 41, 0.03);
+    $background-color_8: color-mix(in srgb, var(--accent-color), transparent 20%);
+    $background-color_9: color-mix(in srgb, var(--background-color), transparent 30%);
+    $background-color_10: color-mix(in srgb, var(--accent-color), transparent 15%);
+    $background-color_11: #F7F9FF;
+    $background-color_12: var(--heading-color);
+    $border-color_1: var(--default-color);
+
+    $rounded-corner:100px;
