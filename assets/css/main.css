@@ -993,7 +993,8 @@ homepage feature section
 .feature-section .btn-theme-gradient {
   position: relative;
 }
-.feature-section .feature-card {
+
+.feature-card {
   position: relative;
   padding: 15px;
   padding-bottom: 120px;
@@ -1002,38 +1003,38 @@ homepage feature section
   transition: all 0.3s;
   overflow: hidden;
 }
-.feature-section .feature-card .feature-icon {
+.feature-card .feature-icon {
   position: absolute;
   width: 100px;
   right: 25px;
   bottom: 25px;
   transition: all 0.5s;
 }
-.feature-section .feature-card .feature-fast-activation-curve {
+.feature-card .feature-fast-activation-curve {
   position: absolute;
   bottom: -25%;
   right: 0;
 }
-.feature-section .feature-card:hover {
+.feature-card:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.feature-section .feature-card:hover .feature-icon {
+.feature-card:hover .feature-icon {
   transform: scale(1.3);
 }
-.feature-section .feature-card .card-body {
+.feature-card .card-body {
   padding-bottom: 50px;
 }
-.feature-section .feature-card.feature-card-theme {
+.feature-card.feature-card-theme {
   background: var(--accent-color);
   background: linear-gradient(103deg, var(--accent-color), #4b76de 100%);
 }
-.feature-section .feature-card.feature-card-theme h3 {
+.feature-card.feature-card-theme h3 {
   color: #fff;
 }
-.feature-section .feature-card.feature-card-theme p {
+.feature-card.feature-card-theme p {
   color: #fff;
 }
-.feature-section .feature-card.feature-card-theme .feature-card-light-circle {
+.feature-card.feature-card-theme .feature-card-light-circle {
   background-color: rgba(255, 255, 255, 0.058);
   width: 300px;
   height: 300px;
@@ -1042,14 +1043,14 @@ homepage feature section
   position: absolute;
   top: -30%;
 }
-.feature-section .feature-card.feature-card-theme .btn-theme-gradient {
+.feature-card.feature-card-theme .btn-theme-gradient {
   background: rgba(255, 255, 255, 0.171);
 }
-.feature-section .feature-card.feature-card-theme .btn-theme-gradient:hover {
+.feature-card.feature-card-theme .btn-theme-gradient:hover {
   background: linear-gradient(103deg, #ffce5f, var(--nav-color) 100%);
   color: var(--default-color);
 }
-.feature-section .feature-card h3 {
+.feature-card h3 {
   font-size: 32px;
 }
 
