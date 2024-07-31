@@ -1004,6 +1004,13 @@ homepage service section
 	
 }
 
+@media only screen and (max-width:540px){
+	.service-card
+	{
+		padding-bottom: 170px;
+	}
+}
+
 /*-------------------------
 homepage feature section
 ------------------------*/
