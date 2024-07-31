@@ -122,6 +122,7 @@ h1 {
 h2 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+  font-size: 50px;
 }
 
 h3 {
