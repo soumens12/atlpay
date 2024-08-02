@@ -1024,6 +1024,7 @@ homepage feature section
 }
 .feature-card .card-body {
   padding-bottom: 50px;
+  z-index: 9;
 }
 .feature-card.feature-card-theme {
   background: var(--accent-color);
