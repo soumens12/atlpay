@@ -1300,5 +1300,18 @@ contact page css
 		object-position: center;
 	}
 }
+.contact-form
+{
+	.form-control
+	{
+		min-height: 48px;
+		background-color: #fafbff;
+		&:focus
+		{
+			box-shadow: none;
+			border: 1px solid var(--accent-color);
+		}
+	}
+}
 
 .error { color: red; font-size: 0.9em; }
