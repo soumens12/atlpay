@@ -26,7 +26,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="index-page">
@@ -679,9 +679,15 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-12">
-                      <label for="contactMessage">Anything else?</label>
+                    <div class="col-lg-12 mb-3">
+                      <label for="contactMessage" class="mb-1">Anything else?</label>
                       <textarea name="" class="form-control" id="contactMessage" rows="3"></textarea>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                      <div class="g-recaptcha" data-sitekey="6LeXqSYqAAAAAPjfTT_lBBfuBrb-yfDsArZWt14Z"></div>
+                    </div>
+                    <div class="col-12 text-end">
+                      <button class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" type="submit">Get Started</button>
                     </div>
                   </div>
                   
