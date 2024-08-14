@@ -1287,3 +1287,18 @@ inner page css starts
 		}
 	}
 }
+
+
+/*-------------------
+contact page css
+--------------------*/
+.contact-hero
+{
+	min-height: 70vh;
+	img.hero-bg
+	{
+		object-position: center;
+	}
+}
+
+.error { color: red; font-size: 0.9em; }

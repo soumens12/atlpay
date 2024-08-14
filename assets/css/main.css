@@ -1227,5 +1227,19 @@ inner page css starts
     font-size: 35px;
   }
 }
+/*-------------------
+contact page css
+--------------------*/
+.contact-hero {
+  min-height: 70vh;
+}
+.contact-hero img.hero-bg {
+  object-position: center;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
 
 /*# sourceMappingURL=main.css.map */
