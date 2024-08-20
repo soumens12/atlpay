@@ -1246,9 +1246,10 @@ contact page css
   border: 1px solid var(--accent-color);
 }
 
-.error {
+.error-message {
   color: red;
-  font-size: 0.9em;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

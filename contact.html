@@ -337,37 +337,43 @@
           <div class="col-lg-6">
             <div class="card shadow-lg border-0">
               <div class="card-body p-4">
-                <form action="" class="contact-form">
+                <form action="" class="contact-form" id="contactForm">
                   <div class="row">
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="firstName">First Name</label>
                       <input type="text" class="form-control" placeholder="John" id="firstName" >
+                      <span id="fname-error" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="lastName">Last Name</label>
                       <input type="text" class="form-control" placeholder="Doe" id="lastName">
+                      <span id="lname-error" class="error-message"></span>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="Designation">Designation</label>
-                      <input type="text" class="form-control" placeholder="Manager" id="designation" >
+                      <input type="text" class="form-control" placeholder="Manager" id="designation">
+                      <span id="designation-error" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="userEmail">Work Email</label>
                       <input type="email" class="form-control" placeholder="exampl@gmail.com" id="userEmail">
+                      <span id="emailError" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="userPhone">Work Phone</label>
-                      <input type="text" class="form-control" placeholder="+5 (555) 555-5555" id="userPhone">
+                      <input type="text" class="form-control" placeholder="123-345-6789" id="userPhone">
+                      <span id="phoneError" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="companyWebsite">Company Website</label>
                       <input type="text" class="form-control" placeholder="www.example.com" id="companyWebsite">
+                      <span id="websiteError" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="industry">Industry</label>
-                      <select class="form-select form-control" id="valIndustry" required>
+                      <select class="form-select form-control" id="valIndustry">
                         <option selected disabled value="">Choose Industry</option>
                         <option value="Information Technology/IT">Information Technology/IT</option>
                         <option value="Manufacturing/Engineering">Manufacturing/Engineering</option>
@@ -384,20 +390,23 @@
                         <option value="Market Research">Market Research</option>
                         <option value="Other Industry">Other Industry</option>
                       </select>
+                      <span id="industryError" class="error-message"></span>
                     </div>
                     <div class="col-lg-6 mb-3">
                       <label class="mb-1" for="companyWebsite">Company Size</label>
-                      <select class="form-select form-control" id="valIndustry" required>
+                      <select class="form-select form-control" id="valEmployees">
                         <option selected disabled value="">Select a range of  Employees</option>
                         <option value="1-99">1-99</option>
                         <option value="100-999">100-999</option>
                         <option value="1000-4999">1000-4999</option>
                         <option value="5000+">5000+</option>
                       </select>
+                      <span id="employeeError" class="error-message"></span>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <label class="mb-1" for="countryList">Country</label>
                       <select class="form-select form-control" id='country_select'  name='country'>
+                           <option selected disabled value="">Select a Country</option>
                           <option value="AF">Afghanistan</option>
                           <option value="AX">Åland Islands</option>
                           <option value="AL">Albania</option>
@@ -500,7 +509,7 @@
                           <option value="HK">Hong Kong</option>
                           <option value="HU">Hungary</option>
                           <option value="IS">Iceland</option>
-                          <option value="IN" selected>India</option>
+                          <option value="IN">India</option>
                           <option value="ID">Indonesia</option>
                           <option value="IR">Iran, Islamic Republic of</option>
                           <option value="IQ">Iraq</option>
@@ -647,11 +656,12 @@
                           <option value="YE">Yemen</option>
                           <option value="ZM">Zambia</option>
                           <option value="ZW">Zimbabwe</option>
-                        </select>
+                      </select>
+                      <span id="countryError" class="error-message"></span>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <label class="mb-1" for="paymentVolume">Payments volume, How much money your business processes online each month.</label>
-                      <select class="form-select form-control" id="valVolume" required>
+                      <select class="form-select form-control" id="valVolume">
                         <option selected disabled value="">Select a Monthly Amount</option>
                         <option value="None, just getting started">None, just getting started</option>
                         <option value="Less than $50,000">Less than $50,000</option>
@@ -660,24 +670,26 @@
                         <option value="$1,000,000 to $5,000,000">$1,000,000 to $5,000,000</option>
                         <option value="More than $5,000,000">More than $5,000,000</option>
                       </select>
+                      <span id="volumeError" class="error-message"></span>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <label for="paymentGateway">Do you have Existing Payment Gateway?</label>
                       <div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="paymentMethodOpen();" id="inlineRadio1" value="option1">
+                          <input class="form-check-input" type="radio" name="paymentMethod" onclick="paymentMethodOpen();" id="inlineRadio1" value="option1">
                           <label class="form-check-label" for="inlineRadio1">Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="paymentMethodClose();" id="inlineRadio2" value="option2">
+                          <input class="form-check-input" type="radio" name="paymentMethod" onclick="paymentMethodClose();" id="inlineRadio2" value="option2">
                           <label class="form-check-label" for="inlineRadio2">No</label>
                         </div>
 
                         <div class="my-3" style="display: none;" id="paymentInput">
                           <label for=""><small>Please add your Payment Gateway name</small></label>
-                          <input type="text" class="form-control" required>
+                          <input type="text" class="form-control" id="paymentGateway">
                         </div>
                       </div>
+                      <span id="pmethodError" class="error-message"></span>
                     </div>
                     <div class="col-lg-12 mb-3">
                       <label for="contactMessage" class="mb-1">Anything else?</label>
@@ -687,7 +699,10 @@
                       <div class="g-recaptcha" data-sitekey="6LeXqSYqAAAAAPjfTT_lBBfuBrb-yfDsArZWt14Z"></div>
                     </div>
                     <div class="col-12 text-end">
-                      <button class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" type="submit">Get Started</button>
+
+                      <button class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" id="contactSubmit">Get Started</button>
+                      <!-- <input class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" type="submit"  value="Get Started"> -->
+                      
                     </div>
                   </div>
                   
@@ -798,14 +813,17 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/navigation.js"></script>
-<script>
-  function paymentMethodOpen () {
-  document.getElementById("paymentInput").style.display="block";
-}
-function paymentMethodClose () {
-  document.getElementById("paymentInput").style.display="none";
-}
-</script>
+  <script>
+    function paymentMethodOpen() {
+    document.getElementById("paymentInput").style.display = "block";
+    }
+    function paymentMethodClose() {
+      document.getElementById("paymentInput").style.display = "none";
+    }
+
+    
+  
+  </script>
 </body>
 
 </html>

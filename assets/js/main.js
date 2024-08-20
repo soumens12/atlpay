@@ -9,6 +9,8 @@
 (function() {
   "use strict";
 
+  
+
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
@@ -107,25 +109,7 @@
    */
   new PureCounter();
 
-  
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-
-  window.addEventListener("load", initSwiper);
 
   /**
    * Frequently Asked Questions Toggle
@@ -152,6 +136,111 @@
     });
   });
 
+
+  //contact form validation
+  document.querySelector("#contactSubmit").addEventListener('click', (e)=>{
+
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const designation = document.getElementById("designation").value;
+    const userEmail = document.getElementById("userEmail").value;
+    const userPhone = document.getElementById("userPhone").value;
+    const companyWebsite = document.getElementById("companyWebsite").value;
+    const valIndustry = document.getElementById("valIndustry").value;
+    const valEmployees = document.getElementById("valEmployees").value;
+    const countrySelect = document.getElementById("country_select").value;
+    const valVolume = document.getElementById("valVolume").value;
+    const paymentMethod = document.getElementsByName("paymentMethod");
+    
+
+    const fnameError = document.getElementById("fname-error");
+    const lnameError = document.getElementById("lname-error");
+    const designationError = document.getElementById("designation-error");
+    const emailError = document.getElementById("emailError");
+    const phoneError = document.getElementById("phoneError");
+    const websiteError = document.getElementById("websiteError");
+    const industryError = document.getElementById("industryError");
+    const employeeError = document.getElementById("employeeError");
+    const countryError = document.getElementById("countryError");
+    const volumeError = document.getElementById("volumeError");
+    const pmethodError = document.getElementById("pmethodError");
+
+    fnameError.textContent = "";
+    lnameError.textContent = "";
+    designationError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    websiteError.textContent = "";
+    industryError.textContent = "";
+    employeeError.textContent = "";
+    countryError.textContent = "";
+    volumeError.textContent = "";
+    pmethodError.textContent = "";
+
+    let namePattern = /^[A-Za-z]+(?:[-' ][A-Za-z]+)*$/;
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    let websitePattern = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?([\/a-zA-Z0-9#?&=_-]*)?$/;
+
+    let isValid = true;
+
+
+    if(!namePattern.test(firstName)){
+      document.getElementById("fname-error").textContent="First name is not valid";
+      isValid = false;
+    }
+    if(!namePattern.test(lastName)){
+      document.getElementById("lname-error").textContent="Last name is not valid";
+      isValid = false;
+    }
+    if(!namePattern.test(designation)){
+      document.getElementById("designation-error").textContent="Last name is not valid";
+      isValid = false;
+    }
+    if(!emailPattern.test(userEmail)){
+      document.getElementById("emailError").textContent="Work Email is not valid";
+      isValid = false;
+    }
+    if(!phonePattern.test(userPhone)){
+      document.getElementById("phoneError").textContent="Phone number must be of 10 digits. Example: 123-345-6789";
+      isValid = false;
+    }
+    if(!websitePattern.test(companyWebsite)){
+      document.getElementById("websiteError").textContent="Website Example: www.example.com";
+      isValid = false;
+    }
+    if(valIndustry === ""){
+      document.getElementById("industryError").textContent="Please select your Industry";
+      isValid = false;
+    }
+    if(valEmployees === ""){
+      document.getElementById("employeeError").textContent="Please select your Employee size";
+      isValid = false;
+    }
+    if(countrySelect === ""){
+      document.getElementById("countryError").textContent="Please select Country";
+      isValid = false;
+    }
+    if(valVolume === ""){
+      document.getElementById("volumeError").textContent="Please select Volume";
+      isValid = false;
+    }
+
+    for (let i = 0; i<paymentMethod.length; i++) {
+      if(paymentMethod[i].checked==true) {
+        return true;
+      }
+      document.getElementById('pmethodError').textContent = "Please select payment method!";
+      return false; // Prevent form submission
+    }
+
+    if(isValid){
+      alert("Form has been submitted");
+    }
+
+  })
 
 
 })();
