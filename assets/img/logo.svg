@@ -44,7 +44,9 @@
         <text class="cls-3" transform="translate(5.6 89.7)"><tspan x="0" y="0">Ever Forward Processing</tspan></text>
       </g>
       <g class="cls-4">
-        <text class="cls-1" transform="translate(320.3 22.2)"><tspan x="0" y="0">TM</tspan></text>
+        <g class="cls-4">
+          <text class="cls-1" transform="translate(320.3 22.2)"><tspan x="0" y="0">TM</tspan></text>
+        </g>
       </g>
     </g>
   </g>
