@@ -1262,6 +1262,10 @@ contact page css
   border: 1px solid var(--accent-color);
 }
 
+#otherIndustry {
+  display: none;
+}
+
 .error-message {
   color: red;
   font-size: 14px;
