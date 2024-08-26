@@ -670,6 +670,22 @@ h6 {
 .footer .copyright p {
   margin-bottom: 0;
 }
+.footer .footer-compliant {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+}
+.footer .footer-compliant span {
+  width: 130px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  height: 60px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.footer .footer-compliant span img {
+  width: 100%;
+}
 
 #preloader {
   position: fixed;

@@ -671,6 +671,24 @@ h6 {
 			margin-bottom: 0;
 		}
 	}
+	.footer-compliant
+	{
+		display: flex;
+		margin-top: 30px;
+		gap: 10px;
+		span{
+			width: 130px;
+			padding: 8px;
+			border: 1px solid #ddd;
+			height: 60px;
+			border-radius: 10px;
+			display: inline-block;
+			img
+			{
+				width: 100%;
+			}
+		}
+	}
 }
 #preloader {
 	position: fixed;
@@ -1319,3 +1337,4 @@ contact page css
     font-size: 14px;
     margin-top: 5px;
 }
+
