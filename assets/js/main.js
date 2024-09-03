@@ -148,7 +148,7 @@
     const userEmail = document.getElementById("userEmail").value;
     const userPhone = document.getElementById("userPhone").value;
     const companyWebsite = document.getElementById("companyWebsite").value;
-    const valIndustry = document.getElementById("valIndustry").value;
+    // const valIndustry = document.getElementById("valIndustry").value;
     const valEmployees = document.getElementById("valEmployees").value;
     const countrySelect = document.getElementById("country_select").value;
     const valVolume = document.getElementById("valVolume").value;
@@ -161,7 +161,7 @@
     const emailError = document.getElementById("emailError");
     const phoneError = document.getElementById("phoneError");
     const websiteError = document.getElementById("websiteError");
-    const industryError = document.getElementById("industryError");
+    // const industryError = document.getElementById("industryError");
     const employeeError = document.getElementById("employeeError");
     const countryError = document.getElementById("countryError");
     const volumeError = document.getElementById("volumeError");
@@ -173,7 +173,7 @@
     emailError.textContent = "";
     phoneError.textContent = "";
     websiteError.textContent = "";
-    industryError.textContent = "";
+    // industryError.textContent = "";
     employeeError.textContent = "";
     countryError.textContent = "";
     volumeError.textContent = "";
@@ -211,10 +211,10 @@
       document.getElementById("websiteError").textContent="Website Example: www.example.com";
       isValid = false;
     }
-    if(valIndustry === ""){
-      document.getElementById("industryError").textContent="Please select your Industry";
-      isValid = false;
-    }
+    // if(valIndustry === ""){
+    //   document.getElementById("industryError").textContent="Please select your Industry";
+    //   isValid = false;
+    // }
     if(valEmployees === ""){
       document.getElementById("employeeError").textContent="Please select your Employee size";
       isValid = false;
