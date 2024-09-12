@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ATLPay-Start Accepting Payments Online</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body class="index-page">
+
+  <!-- <header id="header" class="header d-flex align-items-center fixed-top">
+
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.svg" alt=""></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home<br></a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="get-a-quote.html">Get a Quote</a>
+
+    </div>
+
+
+  </header> -->
+
+  <!-- header start -->
+  <header class="header fixed-top" id="header">
+    <div class="container">
+      <div class="row v-center">
+        <div class="header-item item-left">
+          <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.svg" alt=""></a>
+          </div>
+        </div>
+        <!-- menu start here -->
+        <div class="header-item item-center">
+          <div class="menu-overlay"></div>
+          <nav class="menu">
+            <div class="mobile-menu-head">
+              <div class="go-back"><i class="fa fa-angle-left"></i></div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="menu-main">
+              <li class="menu-item-has-children">
+                <a href="#">Our Solutions<i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="container">
+                    <div class="row">
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/sol1.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Merchant Account</h4>
+                            <p>
+                              Empower Your Business with our Tailored Merchant Account.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="merchant-account.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/sol2.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Payment Gateway</h4>
+                          <p>
+                            Accelerate Your Business with a High-Performance Payment Gateway
+                          </p>
+                          </div>
+                        </div>
+                        <a href="payment-gateway.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/sol3.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Risk Management</h4>
+                            <p>
+                              Mitigate Risk, Protect Your Business
+                            </p>
+                          </div>
+                        </div>
+                        <a href="risk-management.html"></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Industries<i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="container">
+                    <div class="row">
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry1.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">eCommerce</h4>
+                            <p>
+                              Sell Globally, Effortlessly. Accept payments worldwide.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="ecommerce.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry2.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Freelancers</h4>
+                          <p>
+                            Get Paid Faster, Easier & on Your Terms. Effortless Payments.
+                          </p>
+                          </div>
+                        </div>
+                        <a href="freelancer.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry3.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Travel Agencies</h4>
+                            <p>
+                              Simplify Travel Booking & Payments. The All-in-One Payment Solution for Travel Agencies.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="travel-agency.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry4.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Gaming</h4>
+                            <p>
+                              Power Up Your Game. Frictionless Payments with ATLPay's Gaming Payment Gateway. 
+                            </p>
+                          </div>
+                        </div>
+                        <a href="gaming.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry5.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Financial Institutions</h4>
+                            <p>
+                              Power Your Growth. Secure, Scalable Payment Processing with ATLPay.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="financial-institute.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry6.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Adult.</h4>
+                            <p>
+                              Grow Your Adult Business. Accept secure payments discreetly.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="adult.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry7.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">CryptoCurrency.</h4>
+                            <p>
+                              Crypto Made Easy: Buy, Sell & Accept Payments with ATLPay
+                            </p>
+                          </div>
+                        </div>
+                        <a href="crypto-currencies.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/industry8.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">High- Risk.</h4>
+                          <p>
+                            Don't Be Limited by Risk. Get Your Secure & Reliable Merchant Account.
+                          </p>
+                          </div>
+                        </div>
+                        <a href="high-risk.html"></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </li>
+              
+              <li class="menu-item-has-children">
+                <a href="#">Contact</a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="list-item col-lg-6 offset-lg-3 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/contact-sales.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Contact Sales</h4>
+                            <p>
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="contact.html"></a>
+                      </div>
+                      <div class="list-item col-lg-6 offset-lg-3 text-white">
+                        <div class="d-flex align-items-start gap-2">
+                          <div>
+                            <img src="assets/img/contact-suuport.png" width="40" class="mt-1" alt="">
+                          </div>
+                          <div>
+                            <h4 class="title pb-0">Existing clients for support</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                          </div>
+                        </div>
+                        <a href="#"></a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </li>
+              <li class="d-block d-lg-none">
+                <a class="d-flex align-items-center mb-0 px-3"><i class="bi bi-envelope pe-2 text-warning"></i> hello@atlpay.com</a>
+              </li>
+              <li class="d-block d-lg-none">
+                <a href="#" class="header-get-started">Get Started</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- menu end here -->
+        <div class="header-item item-right align-items-center">
+          <div class="header-support flex-column d-none d-lg-flex">
+            <p class="text-white d-flex align-items-center mb-0"><i class="bi bi-envelope pe-2 text-warning"></i> hello@atlpay.com</p>
+          </div>
+          <a href="#" class="header-get-started d-none d-lg-flex">Get Started</a>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section inner-hero contact-hero">
+
+      <img src="assets/img/contact-hero.jpg" alt="" class="hero-bg" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">
+              Dedicated Support at Your Fingertips
+            </h1>
+            <p>
+              Do you need Help? Our support team is here to assist.
+            </p>
+          </div>
+
+          
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title sticky-top position-sticky top-50">
+              <h2>Dedicated Support at Your Fingertips</h2>
+              <p>
+                As a valued ATLPay client, you have access to our dedicated support team. We're committed to providing prompt, efficient, and personalised assistance whenever you need it.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-lg border-0">
+              <div class="card-body p-4">
+                <h4 class="fw-bold">How to Contact Us:</h4>
+                <!-- <form action="" class="contact-form" id="existingContact">
+                  
+                  <div class="row">
+                    <div class="col-lg-12 mb-3">
+                      <label class="mb-1" for="userEmail">Email <span class="text-danger fa-1x">*</span></label>
+                      <input type="email" class="form-control" placeholder="exampl@gmail.com" id="existingEmail">
+                      <span id="existingEmailError" class="error-message"></span>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                      <label class="mb-1" for="userPhone">Work Phone</label>
+                      <input type="text" class="form-control" placeholder="123-345-6789" id="existingPhone">
+                      <span id="existingPhoneError" class="error-message"></span>
+                    </div>
+                    <div class="col-12 text-end">
+                      <button class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" id="existingContactSubmit">Get Started</button>
+                    </div>
+                  </div>
+                  
+                </form> -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.svg" alt="">
+          </a>
+          <p>ATLPay is owned and operated by Agpaytech Ltd.
+            Registered office 3rd Floor, 86-90 Paul Street | 
+            London EC2A 4NE | United Kingdom.</p>
+          <p>
+            Authorised and regulated by the Financial Conduct
+            Authority (FCA) as a Payment Institution under 
+            reference number 585091
+          </p>
+          <div class="footer-compliant">
+            <span>
+              <img src="assets/img/footer-pci-logo.png" width="100%" alt="">
+            </span>
+            <span>
+              <img src="assets/img/footer-iso-logo.png" width="100%" alt="">
+            </span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="user-agreement.html">User Agreement </a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookies Policy </a></li>
+            <li><a href="modern-slavery-act.html">Modern Slavery Act Statement</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Solutions</h4>
+          <ul>
+            <li><a href="merchant-account.html">Merchant Account </a></li>
+            <li><a href="payment-gateway.html">Payment Gateway </a></li>
+            <li><a href="risk-management.html">Risk Management </a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Sectors</h4>
+          <ul>
+            <li><a href="ecommerce.html">eCommerce</a></li>
+            <li><a href="freelancer.html">Freelancers</a></li>
+            <li><a href="travel-agency.html">Travel Agencies</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+            <li><a href="financial-institute.html">Financial institutions</a></li>
+            <li><a href="crypto-currencies.html">Crypto-currrencies </a></li>
+            <li><a href="adult.html">Adult</a></li>
+            <li><a href="high-risk.html">High Risk </a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 footer-contact text-center text-md-start">
+          <h4>Support</h4>
+          <div class="d-flex justify-content-center justify-content-md-start">
+            <span><i class="bi bi-geo-alt-fill text-warning pe-2"></i></span>
+            <p>
+              3rd Floor, 86-90 Paul Street<br>
+              London EC2A 4NE, UK
+            </p>
+          </div>
+          <p><span><i class="bi bi-envelope text-warning pe-2"></i></span><span>hello@atlpay.com</span></p>
+          <div class="social-links justify-content-center justify-content-md-start d-flex mt-4">
+            <a href="https://twitter.com/ATLPayUK"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/ATLPay"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/atlpay"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4 border-top border-dark">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ATLPay</strong> <span>All Rights Reserved</span></p>
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script>
+    function paymentMethodOpen() {
+    document.getElementById("paymentInput").style.display = "block";
+    }
+    function paymentMethodClose() {
+      document.getElementById("paymentInput").style.display = "none";
+    }
+
+    function addIndustry(){
+      let value1 = document.getElementById("valIndustry").value;
+      let otherIndustry = document.getElementById("otherIndustry");
+
+      if(value1 === "otherIndustry"){
+        otherIndustry.style.display = "block";
+      } else
+      {
+        otherIndustry.style.display = "none";
+      }
+
+    }
+  
+  
+  </script>
+</body>
+
+</html>

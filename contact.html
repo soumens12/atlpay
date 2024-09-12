@@ -344,8 +344,11 @@
         <div class="row gy-4 d-flex justify-content-between">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h1 data-aos="fade-up">
-              Contact our sales team
+              Need Assistance? Get in Touch with Our Team
             </h1>
+            <p>
+              Have questions about our payment tool or services, need help with your account integration, or want to learn more? We're here to assist you.
+            </p>
           </div>
 
           
@@ -718,22 +721,22 @@
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="paymentMethod" onclick="paymentMethodClose();" id="inlineRadio2" value="option2">
                           <label class="form-check-label" for="inlineRadio2">No</label>
-                        </div>
-
+                        </div><br>
+                        <span id="pmethodError" class="error-message"></span>
                         <div class="my-3" style="display: none;" id="paymentInput">
                           <label for=""><small>Please add your Payment Gateway name</small></label>
                           <input type="text" class="form-control" id="paymentGateway">
                         </div>
                       </div>
-                      <span id="pmethodError" class="error-message"></span>
+                      
                     </div>
                     <div class="col-lg-12 mb-3">
                       <label for="contactMessage" class="mb-1">Anything else?</label>
                       <textarea name="" class="form-control" id="contactMessage" rows="3"></textarea>
                     </div>
-                    <div class="col-lg-12 mb-3">
+                    <!-- <div class="col-lg-12 mb-3">
                       <div class="g-recaptcha" data-sitekey="6LeXqSYqAAAAAPjfTT_lBBfuBrb-yfDsArZWt14Z"></div>
-                    </div>
+                    </div> -->
                     <div class="col-12 text-end">
 
                       <button class="btn btn-theme-gradient p-3 px-5 rounded-pill d-inline-block" id="contactSubmit">Get Started</button>
@@ -863,18 +866,19 @@
       document.getElementById("paymentInput").style.display = "none";
     }
 
-    function addIndustry(){
-      let value1 = document.getElementById("valIndustry").value;
-      let otherIndustry = document.getElementById("otherIndustry");
+    // function addIndustry(){
+    //   let value1 = document.getElementById("valIndustry").value;
+    //   let otherIndustry = document.getElementById("otherIndustry");
 
-      if(value1 === "otherIndustry"){
-        otherIndustry.style.display = "block";
-      } else
-      {
-        otherIndustry.style.display = "none";
-      }
+    //   if(value1 === "otherIndustry"){
+    //     otherIndustry.style.display = "block";
+    //   } else
+    //   {
+    //     otherIndustry.style.display = "none";
+    //   }
 
-    }
+    // }
+    
   
   
   </script>

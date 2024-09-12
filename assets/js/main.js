@@ -152,7 +152,9 @@
     const valEmployees = document.getElementById("valEmployees").value;
     const countrySelect = document.getElementById("country_select").value;
     const valVolume = document.getElementById("valVolume").value;
-    const paymentMethod = document.getElementsByName("paymentMethod");
+    // const paymentMethod = document.getElementsByName("paymentMethod");
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
     
 
     const fnameError = document.getElementById("fname-error");
@@ -228,19 +230,18 @@
       isValid = false;
     }
 
-    for (let i = 0; i<paymentMethod.length; i++) {
-      if(paymentMethod[i].checked==true) {
-        return true;
-      }
-      document.getElementById('pmethodError').textContent = "Please select payment method!";
-      return false; // Prevent form submission
+    if(!paymentMethod){
+      document.getElementById("pmethodError").textContent="Please select Payment Method";
+      isValid = false;
     }
 
     if(isValid){
-      alert("Form has been submitted");
+     alert("Form has been submitted");
     }
 
   })
+
+  
 
 
 })();
