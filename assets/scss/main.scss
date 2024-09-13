@@ -1347,3 +1347,60 @@ contact page css
     margin-top: 5px;
 }
 
+@keyframes shapeMover {
+
+    0%,
+    100% {
+        transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px) translateX(0);
+    }
+
+    50% {
+        transform: perspective(400px) rotate(0deg) translateZ(20px) translateY(20px) translateX(20px);
+    }
+}
+.work-together__img-box
+{
+	position: relative;
+    display: block;
+	.work-together-shape-1 {
+		position: absolute;
+		bottom: -56px;
+		left: -100px;
+		opacity: 0.20;
+		img
+		{
+			-webkit-animation-name: shapeMover;
+			animation-name: shapeMover;
+			-webkit-animation-duration: 9s;
+			animation-duration: 9s;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+	}
+	.work-together__img-1 {
+		position: relative;
+		display: block;
+	}
+	.work-together__img-2 {
+		position: absolute;
+		bottom: -35px;
+		right: 40px;
+		&::before
+		{
+			position: absolute;
+			bottom: 0;
+			left: -27px;
+			width: 7px;
+			height: 83px;
+			background-color: var(--accent-color);
+			content: "";
+			border-radius: 8px;
+		}
+		img{
+			border-radius: 3px;
+		}
+	}
+	
+}
