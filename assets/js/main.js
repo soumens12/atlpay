@@ -138,108 +138,172 @@
 
 
   //contact form validation
-  document.querySelector("#contactSubmit").addEventListener('click', (e)=>{
+document.addEventListener('DOMContentLoaded', function(){
+  const form1 = document.getElementById("contactForm");
+  const form2 = document.getElementById("existingContact");
 
-    e.preventDefault();
 
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const designation = document.getElementById("designation").value;
-    const userEmail = document.getElementById("userEmail").value;
-    const userPhone = document.getElementById("userPhone").value;
-    const companyWebsite = document.getElementById("companyWebsite").value;
-    // const valIndustry = document.getElementById("valIndustry").value;
-    const valEmployees = document.getElementById("valEmployees").value;
-    const countrySelect = document.getElementById("country_select").value;
-    const valVolume = document.getElementById("valVolume").value;
-    // const paymentMethod = document.getElementsByName("paymentMethod");
-    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+  if(form1){
 
+    document.querySelector("#contactSubmit").addEventListener('click', (e)=>{
+  
+      e.preventDefault();
+  
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const designation = document.getElementById("designation").value;
+      const userEmail = document.getElementById("userEmail").value;
+      const userPhone = document.getElementById("userPhone").value;
+      const companyWebsite = document.getElementById("companyWebsite").value;
+      // const valIndustry = document.getElementById("valIndustry").value;
+      const valEmployees = document.getElementById("valEmployees").value;
+      const countrySelect = document.getElementById("country_select").value;
+      const valVolume = document.getElementById("valVolume").value;
+      // const paymentMethod = document.getElementsByName("paymentMethod");
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+  
+      
+  
+      const fnameError = document.getElementById("fname-error");
+      const lnameError = document.getElementById("lname-error");
+      const designationError = document.getElementById("designation-error");
+      const emailError = document.getElementById("emailError");
+      const phoneError = document.getElementById("phoneError");
+      const websiteError = document.getElementById("websiteError");
+      // const industryError = document.getElementById("industryError");
+      const employeeError = document.getElementById("employeeError");
+      const countryError = document.getElementById("countryError");
+      const volumeError = document.getElementById("volumeError");
+      const pmethodError = document.getElementById("pmethodError");
+  
+      fnameError.textContent = "";
+      lnameError.textContent = "";
+      designationError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+      websiteError.textContent = "";
+      // industryError.textContent = "";
+      employeeError.textContent = "";
+      countryError.textContent = "";
+      volumeError.textContent = "";
+      pmethodError.textContent = "";
+  
+      let namePattern = /^[A-Za-z]+(?:[-' ][A-Za-z]+)*$/;
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      let phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+      let websitePattern = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?([\/a-zA-Z0-9#?&=_-]*)?$/;
+  
+      let isValid = true;
+  
+  
+      if(!namePattern.test(firstName)){
+        document.getElementById("fname-error").textContent="First name is not valid";
+        isValid = false;
+      }
+      if(!namePattern.test(lastName)){
+        document.getElementById("lname-error").textContent="Last name is not valid";
+        isValid = false;
+      }
+      if(!namePattern.test(designation)){
+        document.getElementById("designation-error").textContent="Last name is not valid";
+        isValid = false;
+      }
+      if(!emailPattern.test(userEmail)){
+        document.getElementById("emailError").textContent="Work Email is not valid";
+        isValid = false;
+      }
+      if(!phonePattern.test(userPhone)){
+        document.getElementById("phoneError").textContent="Phone number must be of 10 digits. Example: 123-345-6789";
+        isValid = false;
+      }
+      if(!websitePattern.test(companyWebsite)){
+        document.getElementById("websiteError").textContent="Website Example: www.example.com";
+        isValid = false;
+      }
+      // if(valIndustry === ""){
+      //   document.getElementById("industryError").textContent="Please select your Industry";
+      //   isValid = false;
+      // }
+      if(valEmployees === ""){
+        document.getElementById("employeeError").textContent="Please select your Employee size";
+        isValid = false;
+      }
+      if(countrySelect === ""){
+        document.getElementById("countryError").textContent="Please select Country";
+        isValid = false;
+      }
+      if(valVolume === ""){
+        document.getElementById("volumeError").textContent="Please select Volume";
+        isValid = false;
+      }
+  
+      if(!paymentMethod){
+        document.getElementById("pmethodError").textContent="Please select Payment Method";
+        isValid = false;
+      }
+  
+      if(isValid){
+       alert("Form has been submitted");
+      }
+  
+    });
+  
+  }
+  if(form2){
+  
+    //existing client contact form validation
     
-
-    const fnameError = document.getElementById("fname-error");
-    const lnameError = document.getElementById("lname-error");
-    const designationError = document.getElementById("designation-error");
-    const emailError = document.getElementById("emailError");
-    const phoneError = document.getElementById("phoneError");
-    const websiteError = document.getElementById("websiteError");
-    // const industryError = document.getElementById("industryError");
-    const employeeError = document.getElementById("employeeError");
-    const countryError = document.getElementById("countryError");
-    const volumeError = document.getElementById("volumeError");
-    const pmethodError = document.getElementById("pmethodError");
-
-    fnameError.textContent = "";
-    lnameError.textContent = "";
-    designationError.textContent = "";
-    emailError.textContent = "";
-    phoneError.textContent = "";
-    websiteError.textContent = "";
-    // industryError.textContent = "";
-    employeeError.textContent = "";
-    countryError.textContent = "";
-    volumeError.textContent = "";
-    pmethodError.textContent = "";
-
-    let namePattern = /^[A-Za-z]+(?:[-' ][A-Za-z]+)*$/;
-    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let phonePattern = /^\d{3}-\d{3}-\d{4}$/;
-    let websitePattern = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?([\/a-zA-Z0-9#?&=_-]*)?$/;
-
-    let isValid = true;
-
-
-    if(!namePattern.test(firstName)){
-      document.getElementById("fname-error").textContent="First name is not valid";
-      isValid = false;
+  document.querySelector("#existingContactSubmit").addEventListener('click', (e)=>{
+  
+    e.preventDefault();
+  
+    
+    const existingEmail = document.getElementById("existingEmail").value;
+    const existingPhone = document.getElementById("existingPhone").value;
+    
+    
+    const existingEmailError = document.getElementById("existingEmailError");
+    const existingPhoneError = document.getElementById("existingPhoneError");
+  
+    
+    existingEmailError.textContent = "";
+    existingPhoneError.textContent = "";
+  
+    
+    let existingEmailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let existingPhonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    
+  
+    let isExistingValid = true;
+  
+  
+    
+    if(!existingEmailPattern.test(existingEmail)){
+      document.getElementById("existingEmailError").textContent="Work Email is not valid";
+      isExistingValid = false;
     }
-    if(!namePattern.test(lastName)){
-      document.getElementById("lname-error").textContent="Last name is not valid";
-      isValid = false;
+    if(!existingPhonePattern.test(existingPhone)){
+      document.getElementById("existingPhoneError").textContent="Phone number must be of 10 digits. Example: 123-345-6789";
+      isExistingValid = false;
     }
-    if(!namePattern.test(designation)){
-      document.getElementById("designation-error").textContent="Last name is not valid";
-      isValid = false;
-    }
-    if(!emailPattern.test(userEmail)){
-      document.getElementById("emailError").textContent="Work Email is not valid";
-      isValid = false;
-    }
-    if(!phonePattern.test(userPhone)){
-      document.getElementById("phoneError").textContent="Phone number must be of 10 digits. Example: 123-345-6789";
-      isValid = false;
-    }
-    if(!websitePattern.test(companyWebsite)){
-      document.getElementById("websiteError").textContent="Website Example: www.example.com";
-      isValid = false;
-    }
-    // if(valIndustry === ""){
-    //   document.getElementById("industryError").textContent="Please select your Industry";
-    //   isValid = false;
-    // }
-    if(valEmployees === ""){
-      document.getElementById("employeeError").textContent="Please select your Employee size";
-      isValid = false;
-    }
-    if(countrySelect === ""){
-      document.getElementById("countryError").textContent="Please select Country";
-      isValid = false;
-    }
-    if(valVolume === ""){
-      document.getElementById("volumeError").textContent="Please select Volume";
-      isValid = false;
-    }
-
-    if(!paymentMethod){
-      document.getElementById("pmethodError").textContent="Please select Payment Method";
-      isValid = false;
-    }
-
-    if(isValid){
+    
+  
+    if(isExistingValid){
      alert("Form has been submitted");
     }
+  
+  });
+  
+  }
+});
 
-  })
+
+
+  
+
+
+
+  
 
   
 
